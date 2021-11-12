@@ -1,6 +1,6 @@
 # spring-boot-jpa-jwt-api-restful
 
-_Aplicación API Restful, que expone la creacion de usuarios desarrollada con framerwork spring-boot con autenticación en JWT._
+_Aplicación API Restful, que expone la creacion de usuarios desarrollada con framerwork spring-boot persistencia a BD h2, con autenticación en JWT._
 
 ## Comenzando 🚀
 
