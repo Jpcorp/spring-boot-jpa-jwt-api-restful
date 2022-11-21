@@ -17,7 +17,6 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.espacio.ws.usuarios.exceptions.ResponseException;
 import com.espacio.ws.usuarios.services.JwtUserDetailsService;
 
 import io.jsonwebtoken.ExpiredJwtException;

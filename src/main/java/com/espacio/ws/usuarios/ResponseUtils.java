@@ -6,6 +6,8 @@ public class ResponseUtils {
 	public static final Object MSG_OK_DELETE = "Se elimino con exito";
 	public static String MSG_EMAIL = "El correo ya registrado";
 	public static String MSG_ERROR = "En estos momentos no podemos atender su peticion, favor intente mas tarde";
+	public static String MSG_ERROR_AUTH = "El usuario o contraseña son incorrectas,favor intente nuevamente";
+
 	
 
 }

@@ -40,9 +40,9 @@ public class UsuarioModel implements UserDetails {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(unique = true, nullable = false )
-	private Long id; 
-	
+	@Column(name = "id", unique = true, nullable = false )
+	private Long ID; 
+
 	@NotEmpty(message = "Debe ingresar un name")
 	private String name;
 	
@@ -67,6 +67,9 @@ public class UsuarioModel implements UserDetails {
 	@UpdateTimestamp
     private LocalDateTime modified;
 	
+	@CreationTimestamp
+	private LocalDateTime lastLogin;
+
 	@Column(nullable = true)
 	private boolean isActive;
 	
@@ -80,12 +83,12 @@ public class UsuarioModel implements UserDetails {
 		
 	}
 
-	public Long getId() {
-		return id;
+	public Long getID() {
+		return ID;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setID(Long iD) {
+		ID = iD;
 	}
 
 	public String getName() {
@@ -127,6 +130,14 @@ public class UsuarioModel implements UserDetails {
 
 	public LocalDateTime getModified() {
 		return modified;
+	}
+	
+	public LocalDateTime getLastLogin() {
+		return lastLogin;
+	}
+
+	public void setLastLogin(LocalDateTime lastLogin) {
+		this.lastLogin = lastLogin;
 	}
 	
 	public boolean getIsActive() {

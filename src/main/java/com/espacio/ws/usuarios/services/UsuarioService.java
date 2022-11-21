@@ -77,5 +77,17 @@ public class UsuarioService {
 		return result;
 	}
 
+	public UsuarioModel getUsuarioById(Long id) throws ResponseException {
+
+		UsuarioModel response = new UsuarioModel();
+		try {
+			response = usuarioRepository.findById(id).get();
+		} catch (Exception e) {
+			log.error("Exception: {}", e.getMessage(), e);
+			throw new ResponseException(ResponseUtils.MSG_ERROR);
+		}
+		return response;
+	}
+
 
 }

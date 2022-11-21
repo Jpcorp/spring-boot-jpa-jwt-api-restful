@@ -20,8 +20,8 @@ public class UsuariosApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		template.execute("INSERT INTO USUARIOS (NAME, EMAIL, PASSWORD, CREATED, MODIFIED, IS_ACTIVE) "
-				+ "VALUES ('Juan Rodriguez', 'juan@rodriguez.org', 'hunter2', '2021-10-08 21:00:23', '2021-11-08 22:00:00', 1) ");
+		template.execute("INSERT INTO USUARIOS (NAME, EMAIL, PASSWORD, CREATED, MODIFIED, IS_ACTIVE, LAST_LOGIN ) "
+				+ "VALUES ('Juan Pablo', 'ju.pablo@juan.org', 'hunter2', '2021-10-08 21:00:23', '2021-11-08 22:00:00', 1, '2021-11-08 22:00:00') ");
 		
 		template.execute("INSERT INTO PHONES (NUMBER, CITYCODE, COUNTRYCODE, USUARIOS_ID, CREATED) "
 				+ "VALUES (1234567, 1, 57, 1, '2021-10-08 22:12:23') ");
